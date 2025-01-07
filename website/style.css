@@ -1,0 +1,131 @@
+:root {
+    --primary-color: #691F07;
+    --secondary-color: #E6E6DF;
+    --white-color: #F6F6F6;
+    --black-color: #020202;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; 
+    background-color: var(--primary-color);  
+ 
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    padding: 1rem; 
+    height: 8%; 
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: back;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar-nav li {
+    margin: 0 1rem;
+}
+
+.navbar-nav a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar-nav a img {
+    width: 25px;
+    height: 25px;
+    transition: all 0.3s ease; /* Aggiungi la transizione */
+}
+
+.navbar-nav a:hover img {
+    width: 35px; /* Aumenta la larghezza di 10px */
+    height: 35px; /* Aumenta l'altezza di 10px */
+}
+.navbar-nav a:not(:hover) img {
+    width: 25px;
+    height: 25px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh; 
+    width: auto;
+    padding-top: 80px;
+    margin-bottom: 20%;
+}
+
+.logo-img {
+    width: 400px;
+    /* Make logo responsive */
+    height: auto; 
+    align-items: center;
+}
+
+.menu{
+    background-color: var(--primary-color); 
+    color: var(--secondary-color);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid var(--secondary-color);
+    
+  }
+
+input:hover {
+    font-size: 38px;
+}  
+
+#content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    width: auto;
+    background-color: var(--secondary-color);
+    padding: 40px;
+}
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) { 
+    .navbar {
+        padding: 0.5rem; /* Reduce padding on smaller screens */
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        text-align: center; /* Center icons vertically */
+    }
+
+    .navbar-nav li {
+        margin: 1 rem 0; /* Adjust margin for vertical stacking */
+    }
+}
+   
